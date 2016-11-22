@@ -19,6 +19,6 @@ for ($x = 0; $x < $width; $x++) {
     }
 }
 
-$save = $path . 'atomic-logo.png';
-imagepng($img, $save);
+$newFile = $path . 'atomic-logo.png';
+imagepng($img, $newFile);
 imagedestroy($img);
