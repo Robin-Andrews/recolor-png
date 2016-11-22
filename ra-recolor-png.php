@@ -1,4 +1,4 @@
-<?
+<?php
 
 $path = __dir__ . '/images/';
 $image_file = $path . 'etsy.png';
@@ -22,6 +22,3 @@ for ($x = 0; $x < $width; $x++) {
 $save = $path . 'atomic-logo.png';
 imagepng($img, $save);
 imagedestroy($img);
-
-?>
-
