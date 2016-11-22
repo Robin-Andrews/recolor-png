@@ -57,3 +57,13 @@ class Recolor {
         imagedestroy($image);
     }
 }
+
+/**
+ * Let's actually run the code!
+ */
+
+// Instanciate a new instance of the class
+$recolor = new Recolor();
+
+// Call the class method. As it returns void, we don't need to assign it's return value.
+$recolor->image('etsy.png', 'atomic.png');
