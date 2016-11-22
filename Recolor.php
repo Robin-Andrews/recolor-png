@@ -53,12 +53,14 @@ class Recolor {
             }
         }
 
-        if (imagepng($image, $this->imageFolder . $newFilename)) {
+        $newImagePath = $this->imageFolder . $newFilename;
+
+        if (imagepng($image, $newImagePath)) {
             imagedestroy($image);
-            return "New image was created and saved.";
+            return "New image `$newImagePath` was created and saved.";
         }
 
-        return "Could not create a new image.";
+        return "Could not create new image `$newImagePath`.";
     }
 }
 
