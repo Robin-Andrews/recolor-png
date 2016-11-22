@@ -27,6 +27,10 @@ class Recolor {
     {
         $imagePath = $this->imageFolder . $imageName;
 
+        if (!file_exists($imagePath)) {
+            throw new \Exception("Cannot find the file `$imagePath`.");
+        }
+
         // Perhaps it's worth checking the mime type or file extension so you can swap to `imagecreatefrompng()` ?
 
         $image = imagecreatefromstring(file_get_contents($imagePath));
