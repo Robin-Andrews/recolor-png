@@ -5,7 +5,7 @@ $image_file = $path . 'etsy.png';
 
 $img = imagecreatefromstring(file_get_contents($image_file));
 $width = imagesx($img);
-$hieght = imagesy($img);
+$height = imagesy($img);
 
 $atomic = imagecolorallocate($img, 70, 73, 74);
 
