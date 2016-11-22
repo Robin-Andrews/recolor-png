@@ -10,7 +10,7 @@ $height = imagesy($img);
 $atomic = imagecolorallocate($img, 70, 73, 74);
 
 for ($x = 0; $x < $width; $x++) {
-    for ($y = 0; $y < $width; $y++) {
+    for ($y = 0; $y < $height; $y++) {
         $color = imagecolorat($img, $x, $y);
         $color = imagecolorsforindex($img, $color);
         if ($color['alpha'] !== 127) {
