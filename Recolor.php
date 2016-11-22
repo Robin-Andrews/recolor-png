@@ -23,7 +23,7 @@ class Recolor {
      * @param string $imageName Which image to process
      * @param string $newFilename New filename to save to
      * @return void
-     * 
+     *
      * @throws \Exception
      */
     public function image($imageName, $newFilename)
@@ -35,6 +35,8 @@ class Recolor {
         }
 
         // Perhaps it's worth checking the mime type or file extension so you can swap to `imagecreatefrompng()` ?
+
+        // Then it might be worth processing different images in different methods within the class?
 
         $image = imagecreatefromstring(file_get_contents($imagePath));
         $dimensions = getimagesize($image);
