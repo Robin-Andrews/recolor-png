@@ -20,7 +20,10 @@ class Recolor {
     /**
      * Process an image file
      *
+     * @param string $imageName Which image to process
+     * @param string $newFilename New filename to save to
      * @return void
+     * 
      * @throws \Exception
      */
     public function image($imageName, $newFilename)
