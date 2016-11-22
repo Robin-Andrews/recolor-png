@@ -1,4 +1,10 @@
 <?php
+/**
+ * It's generally a good idea to add a description of your code
+ *
+ * @author Robin Andrews (prandrews@hotmail.co.uk)
+ * @license MIT
+ */
 
 $path = __dir__ . '/images/';
 $image_file = $path . 'etsy.png';
