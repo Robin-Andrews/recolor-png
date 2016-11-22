@@ -22,7 +22,7 @@ class Recolor {
      *
      * @param string $imageName Which image to process
      * @param string $newFilename New filename to save to
-     * @return void
+     * @return string
      *
      * @throws \Exception
      */
@@ -53,8 +53,12 @@ class Recolor {
             }
         }
 
-        imagepng($image, $this->imageFolder . $newFilename);
-        imagedestroy($image);
+        if (imagepng($image, $this->imageFolder . $newFilename)) {
+            imagedestroy($image);
+            return "New image was created and saved.";
+        }
+
+        return "Could not create a new image.";
     }
 }
 
@@ -66,4 +70,5 @@ class Recolor {
 $recolor = new Recolor();
 
 // Call the class method. As it returns void, we don't need to assign it's return value.
-$recolor->image('etsy.png', 'atomic.png');
+$result = $recolor->image('etsy.png', 'atomic.png');
+echo $result;
