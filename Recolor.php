@@ -6,6 +6,8 @@
  * @author David Yell (neon1024@gmail.com)
  * @license MIT
  */
+namespace robinandrews\recolor;
+
 class Recolor {
 
     /**
@@ -19,6 +21,7 @@ class Recolor {
      * Process an image file
      *
      * @return void
+     * @throws \Exception
      */
     public function image($imageName, $newFilename)
     {
